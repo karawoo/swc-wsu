@@ -55,7 +55,7 @@ list.files()
 setwd("~/Desktop/swc-wsu")
 
 ## Load data
-gapminder <- read.csv("data/gapminder.csv")
+gapminder <- read.csv("../data/gapminder.csv")
 head(gapminder)                         # view first 6 rows
 
 ## Information about this object
@@ -165,4 +165,4 @@ gapminder %>%
   select(country, year, pop)
 
 ## export data
-write.csv(gapminder_sml, "gapminder_sml.csv")
+write.csv(gapminder_sml, "../data/gapminder_sml.csv")

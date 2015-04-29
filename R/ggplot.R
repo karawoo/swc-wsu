@@ -3,7 +3,7 @@ library("ggplot2")
 library("dplyr")
 
 # Read in data
-gapminder <- read.csv("gapminder.csv")
+gapminder <- read.csv("../data/gapminder.csv")
 
 # Plot of life expectancy vs gdpPercap
 ggplot(gapminder, aes(x=gdpPercap, y=lifeExp)) + 
@@ -155,7 +155,7 @@ gapminder %>%
   scale_x_log10() + 
   facet_wrap(~ country) + 
   theme_bw() +
-  ggsave("5_country_plot.png")
+  ggsave("../figures/5_country_plot.png")
 
 gapminder %>%
   filter(country %in% c("Iceland", "Mongolia", "China", "Bolivia", "Canada")) %>%
@@ -164,7 +164,7 @@ gapminder %>%
   scale_x_log10() + 
   facet_wrap(~ country) + 
   theme_bw() +
-  ggsave("5_country_plot.pdf", height = 7, width = 10)
+  ggsave("../figures/5_country_plot.pdf", height = 7, width = 10)
 
 
 
